@@ -1,0 +1,161 @@
+
+
+
+## **[Basics] Getting Started with Oculus SDK**
+
+This written tutorial will show you how to set up your VRTK environment with Unity 3D and build a VR demo using Oculus Rift and Touch Controllers.
+## Set up your environment
+
+1.  Download the latest version of the VRTK repository
+
+*   Go to [www.github.com/thestonefox/VRTK](www.github.com/thestonefox/VRTK)
+*   Download Zip file from the master version and save to Desktop
+![giphy](https://media.giphy.com/media/3oFzlUGWJ72dfft1zq/giphy.gif)
+
+2.  Download Oculus Utilities for Unity 5
+
+
+*   Go to Developer.Oculus.com,
+
+*   Select “Develop”,
+*   Select “Downloads”,
+*   Select “Unity”,
+*   Under Core Packages, select “Oculus Utilities for Unity 5”
+It defaults to latest version. Select (1.13/1.14)
+ *   Download version 1.14
+*   Save Zip and extract “corepackage.oculusutility” files to Desktop
+
+## **[Basics] Getting Started with Oculus SDK**
+ 
+This written tutorial will show you how to set up your VRTK environment with Unity 3D and build a VR demo using Oculus Rift and Touch Controllers.
+
+## Set up your environment
+
+3.  Download the latest version of the VRTK repository
+*   Go to [www.github.com/thestonefox/VRTK](www.github.com/thestonefox/VRTK)
+*   Download Zip file from the master version and save to Desktop
+
+http://gph.is/2DiMtwf
+
+1.  **Download Oculus Utilities for Unity 5**
+
+*   Go to Developer.Oculus.com,
+*   Select “Develop”,
+*  Select “Downloads”,
+*   Select “Unity”,
+*   Under Core Packages, select “Oculus Utilities for Unity 5”
+It defaults to latest version. Select (1.13/1.14)
+*   Download version 1.14
+*   Save Zip and extract “corepackage.oculusutility” files to Desktop&lt;iframe src="https://giphy.com/embed/3oFzmlwfieHfn6rZFS" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;
+http://gph.is/2DfCacl
+
+**  2. Import VRTK into New Unity Project**
+
+*   Open **Unity 5.6**
+*   Select“open**”**
+*   Under **Project tab** select “VRTK Master Directory”
+*   Select “Select Folder”
+_(You may get a pop up, ‘Open project with non-matching editor installation’ select “continue”.)_
+
+&lt;iframe src="https://giphy.com/embed/3oFzm8R3dW7Sw9juHC" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;
+http://gph.is/2z8diA5
+
+** 3. Play the Example VRTK Scene**
+
+In Unity 3D, VRTK directory shows ups under the **Project Tab Assets VRTK**
+
+*   Open the “Example Scene” folder within the VRTK directory
+*   Choose any example scene, and open. 
+_Note: VRTK default to ‘simulator’ since Oculus SDK is not installed._
+
+** 4. Import Oculus SDK into VRTK project.**
+
+*   To install Oculus SDK, Import Oculus Utility package
+*   Right click on&nbsp“Assets folder” under **Project** tab
+*   Select ‘Import Package’
+
+*   Select ‘Custom Package’
+*   Find your **Oculus SDK folder** and select ‘OculusUtilities.UnityPackage’ file
+*   Select ‘Import All’
+*   You will be asked to upgrade to unity 5.6, if using 5.14 package, select ‘yes’ _(Otherwise no matter what version, it will default to 5.12)_
+*   You will get asked to restart Unity. Select “Restart”.
+
+http://gph.is/**2z8pPU9**
+
+**     5.  Run Example Scene with Oculus SDK**
+
+*   SDK Manager should show oculus headset and touch controllers 
+*   Run example scene and everything should work no problem, automatically
+
+_Note: you won’t see hand models unless you use the Oculus avatar, free download available on Oculus site._
+
+http://gph.is/2z7ShoY
+
+## How to set up sdk from scratch
+*   Create new empty scene*   Name your scene*   Delete the ‘Main Camera’ in the **Hierarchy tab**
+*   Create a new empty game object*   Rename the game object “VRTKSDK”*   In the **Hierarchy**, select ‘Add Component’ to game object “VRTKSDK”
+*   search and select ‘VRTK_SDK Manager’
+
+http://gph.is/2DkLaNq
+
+*   Under VRTKSDK, create child game object, rename it “Oculus SDK”*   Go to **Project Tab &gt; Assets&gt; OVR &gt; Prefabs** &gt; Select **OVR Camera Rig**.
+*   Drag and drop **OVR Camera rig **as a child to OculusSDK.
+*   Go to **Inspector** **tab** and change _Tracking Origin Type from Eye Level_ to  _Floor Level_
+*   On Oculus SDK game object, go to ‘Add Component’ and add “VRTK Set-Up” script In the **Hierarchy**
+*   For _Quick Select,_ select “Oculus” in the drop-down.*   On VRTKSDK game object, select ‘auto populate’ in the **hierarchy** on the VRTK_SDK Manager.*   You should see Oculus SDK populated into the SDK Manager. Hit _Play_ on the scene and you should have Oculus support in the scene when you move the headset around.
+
+## To add Touch Controller input from scratc
+*   Create a game object called ‘RightController’*   Create another game object called ‘LeftController’*   On **VRTKSDK &gt; VRTK_SDK Manager**, drag and drop game objects “Right Controller’ and ‘LeftController’ into the correlating “Script Alias”*   On RightController game object, select ‘add components’ in the Inspector and add _VRTK_ControllerEvents script, VRTK_Pointer script_, and _VRTK_StraightPointer Renderer_ script,
+*   Drag and drop _VRTK StraightPointer Renderer_ script into VRTK Pointer Component under _“Pointer Activation Settings &gt; Pointer Renderer”_ Run the scene and your Oculus pointer should work by pressing on the Thumbstick.
+
+http://gph.is/2DfCacl
+
+**     3.  Play the Example VRTK Scene**
+
+In Unity 3D, VRTK directory shows ups under the **Project Tab &gt; Assets &gt; VRTK**
+
+*   Open the “Example Scene” folder within the VRTK directory
+*   Choose any example scene, and open. 
+_Note: VRTK default to ‘simulator’ since Oculus SDK is not installed._
+
+**     4.  Import Oculus SDK into VRTK project.**
+
+*   To install Oculus SDK, Import Oculus Utility package
+*   Right click on “Assets folder” under **Project** tab
+*   Select ‘Import Package’
+*   Select ‘Custom Package’
+*   Find your **Oculus SDK folder** and select ‘OculusUtilities.UnityPackage’ file
+*   Select ‘Import All’
+*   You will be asked to upgrade to unity 5.6, if using 5.14 package, select ‘yes’ _(Otherwise no matter what version, it will default to 5.12)_
+*   You will get asked to restart Unity. Select “Restart”.
+
+
+http://gph.is/**2z8pPU9**
+
+**     5.  Run Example Scene with Oculus SDK**
+
+*   SDK Manager should show oculus headset and touch controllers 
+*   Run example scene and everything should work no problem, automatically
+_Note: you won’t see hand models unless you use the Oculus avatar, free download available on Oculus site._
+
+http://gph.is/2z7ShoY
+
+## How to set up sdk from scratch
+
+*   Create new empty scene*   Name your scene*   Delete the ‘Main Camera’ in the **Hierarchy tab**
+*   Create a new empty game object*   Rename the game object “VRTKSDK”*   In the **Hierarchy**, select ‘Add Component’ to game object “VRTKSDK”
+*   search and select ‘VRTK_SDK Manager’
+
+
+http://gph.is/2DkLaNq
+
+*   Under VRTKSDK, create child game object, rename it “Oculus SDK”*   Go to **Project Tab &gt; Assets&gt; OVR &gt; Prefabs** &gt; Select **OVR Camera Rig**.
+*   Drag and drop **OVR Camera rig **as a child to OculusSDK.
+*   Go to **Inspector** **tab** and change _Tracking Origin Type from Eye Level_ to  _Floor Level_
+*   On Oculus SDK game object, go to ‘Add Component’ and add “VRTK Set-Up” script In the **Hierarchy**
+*   For _Quick Select,_ select “Oculus” in the drop-down.*   On VRTKSDK game object, select ‘auto populate’ in the **hierarchy** on the VRTK_SDK Manager.*   You should see Oculus SDK populated into the SDK Manager. Hit _Play_ on the scene and you should have Oculus support in the scene when you move the headset around.
+
+## To add Touch Controller input from scratch
+*   Create a game object called ‘RightController’*   Create another game object called ‘LeftController’*   On **VRTKSDK &gt; VRTK_SDK Manager**, drag and drop game objects “Right Controller’ and ‘LeftController’ into the correlating “Script Alias”*   On RightController game object, select ‘add components’ in the Inspector and add _VRTK_ControllerEvents script, VRTK_Pointer script_, and _VRTK_StraightPointer Renderer_ script,
+*   Drag and drop _VRTK StraightPointer Renderer_ script into VRTK Pointer Component under _“Pointer Activation Settings &gt; Pointer Renderer”_ Run the scene and your Oculus pointer should work by pressing on the Thumbstick.
+
